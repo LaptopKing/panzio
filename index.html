@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Panzió</title>
+</head>
+<body>
+    <div class="container">
+        <div class="display-4 text-center py-5">Balaton Panzió - Szobafoglalás</div>
+
+        <div class="w-75 text-center m-auto">
+            <form>
+                <table class="table">
+                    <tr>
+                        <td>
+                            <p>Érkezés dátuma:</p>
+                            <p>Távozás dátuma:</p>
+                        </td>
+                        <td>
+                            <p><input type="date" name="erkezes" id="erkezes"></p>
+                            <p><input type="date" name="tavozas" id="tavozas"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"><p>Szoba típusa:</p></td>
+                        <td>
+                            <p><input type="radio" name="szoba">Egyágyas - 9000 Ft/éj</p>
+                            <p><input type="radio" name="szoba">Kétágyas - 15000 Ft/éj</p>
+                            <p><input type="radio" name="szoba">Kétágyas 1 pótággyal - 18000 Ft/éj</p>
+                            <p><input type="radio" name="szoba">Kétágyas 2 pótággyal - 21000 Ft/éj</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle">
+                            <p>Vendégek száma: </p>
+                            <p>Vendégek életkora: </p>
+                        </td>
+                        <td>
+                            <select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
