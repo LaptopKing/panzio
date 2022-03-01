@@ -10,7 +10,7 @@
     <title>Panzió</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" onload="betolteskor()">
         <div class="display-4 text-center py-5">Balaton Panzió - Szobafoglalás</div>
 
         <div class="w-75 text-center m-auto">
@@ -29,10 +29,10 @@
                     <tr>
                         <td class="align-middle"><p>Szoba típusa:</p></td>
                         <td>
-                            <p><input type="radio" name="szoba">Egyágyas - 9000 Ft/éj</p>
-                            <p><input type="radio" name="szoba">Kétágyas - 15000 Ft/éj</p>
-                            <p><input type="radio" name="szoba">Kétágyas 1 pótággyal - 18000 Ft/éj</p>
-                            <p><input type="radio" name="szoba">Kétágyas 2 pótággyal - 21000 Ft/éj</p>
+                            <p><input type="radio" name="szoba" id="egyagy">Egyágyas - 9000 Ft/éj</p>
+                            <p><input type="radio" name="szoba" id="ketagy">Kétágyas - 15000 Ft/éj</p>
+                            <p><input type="radio" name="szoba" id="haromagy">Kétágyas 1 pótággyal - 18000 Ft/éj</p>
+                            <p><input type="radio" name="szoba" id="negyagy">Kétágyas 2 pótággyal - 21000 Ft/éj</p>
                         </td>
                     </tr>
                     <tr>
@@ -42,19 +42,19 @@
                         </td>
                         <td>
                             <p>
-                                <select>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
+                                <select id="vendegszam">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
                                 </select>
                                 fő
                             </p>
                             <p>
-                                <input style="width: 6ch;" maxlength="3" type="number" length="3" min="0"> év
-                                <input style="width: 6ch;" maxlength="3" type="number" length="3" min="0"> év
-                                <input style="width: 6ch;" maxlength="3" type="number" length="3" min="0"> év
-                                <input style="width: 6ch;" maxlength="3" type="number" length="3" min="0"> év
+                                <input style="width: 6ch;" maxlength="3" type="number" length="3" min="0" max="150" id="e1"> év
+                                <input style="width: 6ch;" maxlength="3" type="number" length="3" min="0" max="150" id="e2"> év
+                                <input style="width: 6ch;" maxlength="3" type="number" length="3" min="0" max="150" id="e3"> év
+                                <input style="width: 6ch;" maxlength="3" type="number" length="3" min="0" max="150" id="e4"> év
                             </p>
                         </td>
                     </tr>
@@ -66,15 +66,15 @@
                         </td>
                         <td>
                             <p>
-                                <input type="radio" name="ellatas">
+                                <input type="radio" name="ellatas" id="reggeli">
                                 Reggeli - 900 Ft/fő/nap
                             </p>
                             <p>
-                                <input type="radio" name="ellatas">
+                                <input type="radio" name="ellatas" id="felpanzio">
                                 Félpanzió - 2900 Ft/fő/nap
                             </p>
                             <p>
-                                <input type="radio" name="ellatas">
+                                <input type="radio" name="ellatas" id="teljespanzio">
                                 Teljes panzió - 4900 Ft/fő/nap
                             </p>
                         </td>
@@ -84,10 +84,10 @@
                             <p>Fürdő szolgáltatások:</p>
                         </td>
                         <td>
-                            <p><input type="checkbox" name="furdo">Beltéri medencék - 800 Ft/fő/nap</p>
-                            <p><input type="checkbox" name="furdo">Kültéri medencék - 800 Ft/fő/nap</p>
-                            <p><input type="checkbox" name="furdo">Szauna belépő - 800 Ft/fő/nap</p>
-                            <p><input type="checkbox" name="furdo">Teljes belépő - 2000 Ft/fő/nap</p>
+                            <p><input type="checkbox" name="furdo" id="belteri">Beltéri medencék - 800 Ft/fő/nap</p>
+                            <p><input type="checkbox" name="furdo" id="kulteri">Kültéri medencék - 800 Ft/fő/nap</p>
+                            <p><input type="checkbox" name="furdo" id="szauna">Szauna belépő - 800 Ft/fő/nap</p>
+                            <p><input type="checkbox" name="furdo" id="teljes">Teljes belépő - 2000 Ft/fő/nap</p>
                         </td>
                     </tr>
                     <tr>
@@ -100,9 +100,15 @@
                     </tr>
                 </table>
                 <div class="text-center py-5">
-                    <input type="submit" value="Költségkalkuláció" class="btn btn-primary" onclick="kalkulacio()">
+                    <input type="button" value="Költségkalkuláció" class="btn btn-primary" onclick="kalkulacio()">
                 </div>
             </form>
+        </div>
+
+        <div id="ajanlat">
+            <h1 class="text-center">
+                Ajánlat
+            </h1>
         </div>
     </div>
 </body>
